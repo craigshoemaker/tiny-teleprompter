@@ -8,6 +8,6 @@
   document.body.onkeyup = (e) => {
     const keyCode = e.keyCode.toString();
     if (/32|39|77/.test(keyCode)) advance("next");
-    if (/37|78/.test(keyCode)) advance("prev");
+    if (/37|78/.test(keyCode)) advance("previous");
   };
 })();

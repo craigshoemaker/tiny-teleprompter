@@ -1,7 +1,7 @@
 const splitter = {
   split: (text) => {
     const MAX_LINE_LENGTH = 40;
-    const words = text.split(" ");
+    const words = text.replace(/\n/g, "").split(" ");
     const lines = [""];
     let index = 0;
 
