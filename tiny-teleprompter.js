@@ -1,18 +1,11 @@
 (() => {
   let currentElement = document.querySelector("p");
-
   const goTo = (el) => el.scrollIntoView(true);
-
   const advance = (direction) => {
-    const sibling = /next/.test(direction)
-      ? "nextElementSibling"
-      : "previousElementSibling";
-
-    currentElement = currentElement[sibling];
+    currentElement = currentElement[direction + "ElementSibling"];
     if (!currentElement) {
       currentElement = document.querySelector("p");
     }
-
     goTo(currentElement);
   };
 

@@ -20,5 +20,7 @@ const splitter = {
       const space = line.length > 0 ? " " : "";
       lines[index] = `${line}${space}${word}`;
     });
+
+    return lines;
   },
 };
