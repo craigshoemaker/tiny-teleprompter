@@ -69,11 +69,18 @@ a {
 
 
       document.addEventListener("DOMContentLoaded", () => {
+        const $input = document.getElementById("input");
+        const $output = document.getElementById("output");
+
+        $input.addEventListener("focus", () => {
+          $output.value = "";
+        });
+
         document.getElementById("generate-button").addEventListener("click", () => {
-          const input = document.getElementById("input").value;
+          const input = $input.value;
           const chunks = splitter.split(input);
           const output = "<p>" + chunks.join("</p>\n<p>") + "</p>";
-          document.getElementById("output").value = getTemplate(output).trim();
+          $output.value = getTemplate(output).trim();
         });
       });
     })();
