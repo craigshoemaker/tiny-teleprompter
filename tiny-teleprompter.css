@@ -12,3 +12,7 @@ p {
 body > p {
   padding-top: 0;
 }
+
+a {
+  color: #5bbbff;
+}
